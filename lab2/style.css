@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+html, body, p {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.content > header {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  align-items: center;
+}
+.content > header h1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 32px;
+}
+.content > header nav {
+  display: flex;
+  flex-grow: 2;
+  align-self: flex-start;
+  justify-content: flex-end;
+}
+.content > header nav a {
+  width: 75px;
+}
+
+.logo {
+  border-radius: 50px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #111;
+  font-size: 32px;
+  background-color: #CCC;
+  font-weight: 600;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+main article {
+  margin: 15px;
+  width: 100%;
+  border: 2px solid #111;
+  display: flex;
+  flex-direction: column;
+}
+main article p {
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding: 15px;
+}
+main article header {
+  height: 50px;
+  width: 50%;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-self: flex-end;
+  background-color: #CCC;
+  border-left: 2px solid #111;
+  border-bottom: 2px solid #111;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  background-color: #CCC;
+  border-top: 2px solid #111;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+footer p + p {
+  font-weight: bold;
+}
+
+.menu-icon {
+  background-color: #CCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: none;
+  border: 2px solid #111;
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
+}
+.menu-icon .menu-icon--inner {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+}
+.menu-icon .menu-icon--inner::before, .menu-icon .menu-icon--inner::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+}
+.menu-icon .menu-icon--inner::before {
+  transform: translateY(-15px);
+}
+.menu-icon .menu-icon--inner::after {
+  transform: translateY(15px);
+}
+
+@media all and (max-width: 900px) {
+  main {
+    flex-wrap: wrap;
+  }
+
+  header > h1 {
+    display: none;
+  }
+
+  header > nav > a {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

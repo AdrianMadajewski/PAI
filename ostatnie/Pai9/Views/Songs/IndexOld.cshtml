@@ -1,0 +1,20 @@
+﻿
+@model Pai9.Models.Song
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table-bordered">
+    <tr>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Genre</th>
+    </tr>
+    <tr>
+        <td>@Model.Title</td>
+        <td>@Model.Artist</td>
+        <td>@Model.GenreId</td>
+    </tr>
+</table>
